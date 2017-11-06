@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="utf-8">
+    <base href="/" />
+    <title>{{title}}</title>
+    <meta name="description" content="{{metaDescription}}" />
+    <meta name="keywords" content="{{metaKeywords}}" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1, maximum-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" media="screen, projection" href="css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-beta.1/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
+    <script type="text/javascript" src="lib/greensock/TweenMax.min.js"></script>
+    <script src="app.js"></script>
+    <script src="services/videos.js"></script>
+    <script src="components/videos.js"></script>
+    <script src="components/videoItem.js"></script>
+    <script src="components/truncate.js"></script>
+</head>
+
+<body>
+    <div class="header-container">
+        <div class="ui stackable container menu">
+            <div class="item">
+                <h3><a ui-sref="app">My YouTube Playlist</a></h3>
+            </div>
+        </div>
+    </div>
+    <!-- List View -->
+        <ui-view class="playlist"></ui-view>
+    <!-- end List View -->
+</body>
+
+</html>

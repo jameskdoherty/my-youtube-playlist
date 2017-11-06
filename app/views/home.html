@@ -1,0 +1,64 @@
+<div ng-controller="DrawCtrl" class="slider landing" ng-class="{'drawer-open': open}">
+    <div id="">
+        <!-- ng-controllerdrawer-->
+        <div hide-me="isHidden" class="drawer">
+            <!--  <div pager></div> -->
+            <div class="drawer-header">
+                <div class="drawer-header-left">
+                    <i class="drawer-back-icon"></i>
+                    <div class="drawer-header-separator"></div>
+                </div>
+                <div class="drawer-title">
+                    <div>ga.me</div>
+                </div>
+                <div class="drawer-header-right">
+                    <div class="drawer-header-separator"></div>
+                    <i class="drawer-close-icon icon-tz-nav-close" ng-click="toggleDrawer()"></i></div>
+            </div>
+            <div id="wrapper">
+                <div id="click_through"></div>
+            </div>
+            <div class="drawer-contents">
+                <div class="main-page cs-scrollbar ng-scope tz-anim ">
+                    <div class="drawer-row">
+                        <div class="drawer-row-left"> <i class="user-blipper user-icon  ng-isolate-scope ng-binding  cs-base -invert" ng-bind="user.guest ? 'g' : hasAvatar(user) ? '' : (user.username[0] + user.username[1])" tz-user-blipper="usersList[state.identity.user.toLowerCase()]" cs="colorScheme">ji</i> </div>
+                        <div class="drawer-row-center ng-binding" ng-bind="state.identity.user">jimmyTwoTone</div>
+                    </div>
+                    <div class="close" ng-class="{show: showElement}"></div>
+                    <div class="drawer-row">
+                        <div class="">dashboard</div>
+                    </div>
+                    <div class="drawer-row">
+                        <div class=""></div>
+                        <div class="">games</div>
+                    </div>
+                    <div class="drawer-row">
+                        <div class="drawer-row-left glyph"></div>
+                        <div class="drawer-row-center">games</div>
+                    </div>
+                    <div class="drawer-row">
+                        <div class="drawer-row-left glyph"></div>
+                        <div class="drawer-row-center">games</div>
+                    </div>
+                    <div class="drawer-row">
+                        <div class="drawer-row-left glyph"></div>
+                        <div class="drawer-row-center">games</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar-gradient" ng-show="!state.ui.hidden"></div>
+    <div class="tz-anim nav-bar slide-block logged-out">
+        <!-- ngIf: state.drawer.open -->
+        <div class="cs-base "> <i class="nav-home-icon-shadow"></i> <i class="nav-home-icon"></i> </div>
+        <div class="nav-menu-icon icon-tz-nav-menu" ng-click="toggleDrawer()"></div>
+        <!-- <div class="nav-menu-icon icon-tz-nav-menu" ng-click="toggleDrawer('')"></div> -->
+        <a ui-sref="people" ui-sref-active="active"><span>People</span></a>
+        <div class=""> <a ui-sref="about" ui-sref-active="active"><span>about</span></a> </div>
+        <div class="link text-button" ng-click="toggleDrawer('games')">GAMES</div>
+        <a ui-sref="contact" ui-sref-active="active"><span>contact</span></a>
+        <div class="link text-button" ui-sref="home" ui-sref-active="active">home</div>
+        <div class="link text-button ng-binding" ng-click="toggleDrawer('friends')">FRIENDS</div>
+    </div>
+</div>

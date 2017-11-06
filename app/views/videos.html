@@ -1,0 +1,20 @@
+<div class='list-container' ng-repeat="videoItem in $ctrl.videos | orderBy:sortorder">
+    <div class='list-item'>
+        <div class='image'>
+            <a ui-sref-active="active" ui-sref="videos.videoItem({ videoId: videoItem.id, videoName: videoItem.name })">
+            <img ng-src="{{videoItem.snippet.thumbnails.high.url}}" class="" alt="{{videoItem.snippet.title}}" itemprop="image">
+        </a>
+        </div>
+        <div class='item-description'>
+            <h3 class="item-title"><a ui-sref-active="active" ui-sref="videos.videoItem({ videoId: videoItem.id, videoName: videoItem.name })">{{videoItem.snippet.title}}</a></h3>
+            <p class="item-publish-date">{{videoItem.snippet.publishedAt}}</p>
+            <p class="item-list-description">{{videoItem.snippet.description | truncate:true:250:' ...'}}</p>
+        </div>
+        <div class='clear'></div>
+    </div>
+</div>
+<!-- Detail Item View Begin -->
+<div>
+    <ui-view></ui-view>
+</div>
+<!-- End Detail Item View -->

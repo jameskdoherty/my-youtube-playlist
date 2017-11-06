@@ -1,0 +1,21 @@
+<div class="detail-group">
+    <div class='detail-view-wrapper'>
+        <div class='detail-item'>
+            <div>
+                <button ui-sref="videos">
+                    < Back to List of Videos </button>
+                    <h2>{{$ctrl.videoItem.snippet.title}}</h2>
+                    <p class="item-publish-date">Published On {{$ctrl.videoItem.snippet.publishedAt}}</p>
+            </div>
+            <div class="image">
+            <div class="videoWrapper">
+                <iframe id="ytplayer" type="text/html" width="640" height="360" ng-src="{{iFrameSrc}}" frameborder="0"></iframe>
+            </div>
+        </div>
+            <div class='item-description'>
+                <p>{{$ctrl.videoItem.snippet.description}}</p>
+            </div>
+            <div class='clear'></div>
+        </div>
+    </div>
+</div>
